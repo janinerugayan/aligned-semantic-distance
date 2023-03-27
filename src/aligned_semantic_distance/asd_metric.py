@@ -4,7 +4,12 @@ from dtw import dtw
 from scipy.spatial import distance
 import torch
 from tabulate import tabulate
-from IPython.display import HTML, display
+from aligned_semantic_distance.exceptions import DuplicateLayersException, IncorrectLayersException
+
+try:
+    from IPython.display import HTML, display
+except ImportError:
+    HTML, display = None, None
 
 
 def get_asd_output(reference_text: str, hypothesis_text: str, model, tokenizer, layers: list[int] = []):
@@ -28,10 +33,10 @@ def get_asd_output(reference_text: str, hypothesis_text: str, model, tokenizer, 
     # input checks
     if layers:
         if len(set(layers)) != len(layers):
-            raise Exception("Duplicate layer numbers declared in the list.")
+            raise DuplicateLayersException("Duplicate layer numbers declared in the list.")
         for num in layers:
             if num > model.config.num_hidden_layers or num < 1:
-                raise Exception("Input layer number unacceptable for the model.")
+                raise IncorrectLayersException("Input layer number unacceptable for the model.")
     
     # tokenize the ref & hyp texts
     tokenized_ref = tokenizer(reference_text, padding=True, truncation=True, max_length=512, return_tensors="pt")
