@@ -1,3 +1,9 @@
+"""
+ASD metric
+==========
+
+"""
+
 from collections import namedtuple
 import numpy as np
 from dtw import dtw
@@ -16,16 +22,16 @@ def get_asd_output(reference_text: str, hypothesis_text: str, model, tokenizer, 
     """
     Calculates the aligned semantic distance of reference and hypothesis text pair.
     
-    :param reference_text: Reference text for the ASR transcription. 
-    :param hypothesis_text: Hypothesis text from the ASR model. 
-    :param model: BERT model used to calculate the ASD score. 
-    :param tokenizer: Tokenizer of the BERT model. 
-    :param layers: List of hidden layer numbers considered in the extraction of the reference and hypothesis 
-    embedding vectors. Function uses all the layers of the BERT model by default (Default: []). 
+    :param str reference_text: Reference text for the ASR transcription. 
+    :param str hypothesis_text: Hypothesis text from the ASR model. 
+    :param transformers.BertModel model: BERT model used to calculate the ASD score. 
+    :param transformers.AutoTokenizer tokenizer: Tokenizer of the BERT model. 
+    :param list[int] layers: List of hidden layer numbers considered in the extraction of the reference and hypothesis 
+                             embedding vectors. Function uses all the layers of the BERT model by default (Default: []). 
 
     :return: The calculated ASD score which is the accumulated distance of the optimal alignment normalized 
-    by the total number of tokens in the reference embedding vector. It also returns the aligned tokens and token 
-    embeddings for both the reference and hypothesis.
+             by the total number of tokens in the reference embedding vector. It also returns the aligned tokens 
+             and token embeddings for both the reference and hypothesis.
     :rtype: namedtuple 
     
     """
@@ -96,7 +102,7 @@ def get_asd_output(reference_text: str, hypothesis_text: str, model, tokenizer, 
     return asd_output
 
 
-def in_notebook():
+def _in_notebook():
     try:
         from IPython import get_ipython
         if 'IPKernelApp' not in get_ipython().config:  # pragma: no cover
@@ -108,12 +114,12 @@ def in_notebook():
     return True
 
 
-def print_alignment(asd_output):
+def print_alignment(asd_output: namedtuple):
     """
     Prints the resulting token-wise alignment of the reference and hypothesis. 
     
-    :param asd_output: Return value of the get_asd_output function. It contains the ASD score/value, list of aligned reference 
-    and hypothesis tokens, list of aligned reference and hypothesis token embeddings. 
+    :param asd_output: Return value of the get_asd_output function. It contains the ASD score/value, list of aligned 
+                       reference and hypothesis tokens, list of aligned reference and hypothesis token embeddings. 
     :type asd_output: namedtuple
     """
     
@@ -124,7 +130,7 @@ def print_alignment(asd_output):
     hyp_token_list.insert(0, "HYP:")
     alignment_table = [ref_token_list, hyp_token_list]
     
-    if in_notebook():
+    if _in_notebook():
         table = tabulate(alignment_table, tablefmt="html")
         display(HTML(table))
     else:

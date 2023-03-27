@@ -1,10 +1,13 @@
 """
-Package name
-============
+aligned_semantic_distance
+==========================
 
 Start writing your documentation using comments.
 
 https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
+
+.. automodule:: aligned_semantic_distance.asd_metric
+   :members:
 
 """
 

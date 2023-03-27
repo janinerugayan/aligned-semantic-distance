@@ -28,3 +28,4 @@ def test_correct_layers():
 
 def test_empty_layer_list():
     get_asd_output(ref_text, hyp_text, model, tokenizer, [])
+

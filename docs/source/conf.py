@@ -9,7 +9,7 @@
 from datetime import datetime as dt
 
 project = 'aligned_semantic_distance'
-author = 'Example Author'
+author = 'Janine Rugayan'
 copyright = '{year}, {author}'.format(year=dt.now().year, author=author)
 release = '0.0.1'
 
