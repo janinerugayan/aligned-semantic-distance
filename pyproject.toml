@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aligned_semantic_distance"
+authors = [
+  { name="Example Author", email="author@example.com" },
+]
+description = "A small example package"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dynamic = ["version", "readme", "dependencies"]
+
+[project.urls]
+"Homepage" = "https://github.com/matuskosut/python-package"
+
+[tool.setuptools.dynamic]
+version = {attr = "aligned_semantic_distance.VERSION"}
+readme = {file = ["README.MD"]}
+dependencies = {file = ["requirements.txt"]}
+
