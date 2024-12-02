@@ -2,7 +2,7 @@
 This package implements the semantic distance for automatic speech recognition (ASR) first introduced in
 
 *Janine Rugayan and Torbjørn Svendsen and Giampiero Salvi* (2022) **Semantically Meaningful Metrics for Norwegian ASR Systems}**. In Interspeech, 2283-2287
-[![DOI:10.21437/Interspeech.2022-817]](https://doi.org/10.21437/Interspeech.2022-817)
+[![DOI:10.21437/Interspeech.2022-817](https://zenodo.org/badge/DOI/10.21437/Interspeech.2022-817.svg)](https://doi.org/10.21437/Interspeech.2022-817)
 
 A more detailed analysis of the metric was later included in
 ```
