@@ -1,14 +1,12 @@
 # Aligned Semantic Distance
 This package implements the semantic distance for automatic speech recognition (ASR) first introduced in
 
-*Janine Rugayan and Torbjørn Svendsen and Giampiero Salvi* (2022). **Semantically Meaningful Metrics for Norwegian ASR Systems**. In Interspeech, pp. 2283-2287
-
+*Janine Rugayan and Torbjørn Svendsen and Giampiero Salvi* (2022). **Semantically Meaningful Metrics for Norwegian ASR Systems**. In Interspeech, pp. 2283-2287<br>
 [![DOI:10.21437/Interspeech.2022-817](https://zenodo.org/badge/DOI/10.21437/Interspeech.2022-817.svg)](https://doi.org/10.21437/Interspeech.2022-817)
 
 A more detailed analysis of the metric was later included in
 
-*Janine Rugayan and Giampiero Salvi and Torbjørn Svendsen* (2023). **Perceptual and Task-Oriented Assessment of a Semantic Metric for ASR Evaluation**. In Interspeech, pp. 2158--2162
-
+*Janine Rugayan and Giampiero Salvi and Torbjørn Svendsen* (2023). **Perceptual and Task-Oriented Assessment of a Semantic Metric for ASR Evaluation**. In Interspeech, pp. 2158--2162<br>
 [![DOI:10.21437/Interspeech.2023-1778](https://zenodo.org/badge/DOI/10.21437/Interspeech.2023-1778.svg)](https://doi.org/10.21437/Interspeech.2023-1778)
 
 If you use this code in your research, please achnowledge us by citing at least one of the above papers.
