@@ -12,7 +12,7 @@ python3 -m pip install "git+https://github.com/${username}/${repository}.git@${b
 ```
 for example
 ```
-python3 -m pip install "git+https://github.com/${username}/janinerugayan/aligned-semantic-distance.git"
+python3 -m pip install "git+https://github.com/janinerugayan/aligned-semantic-distance.git"
 ```
 Check installation with
 ```
