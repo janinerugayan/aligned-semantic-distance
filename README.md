@@ -1,7 +1,5 @@
 # Aligned Semantic Distance
 This package implements the semantic distance for automatic speech recognition (ASR) first introduced in
-<pre>
-  <a href="https://doi.org/10.21437/Interspeech.2022-817">
 ```
 @inproceedings{rugayan22_interspeech,
   title     = {Semantically Meaningful Metrics for Norwegian ASR Systems},
@@ -9,12 +7,14 @@ This package implements the semantic distance for automatic speech recognition (
   year      = {2022},
   booktitle = {Interspeech 2022},
   pages     = {2283--2287},
-  doi       = {10.21437/Interspeech.2022-817},
+  doi       = {<pre>
+    <a href="https://doi.org/10.21437/Interspeech.2022-817">
+      10.21437/Interspeech.2022-817
+    </a>
+  </pre>},
   issn      = {2958-1796},
 }
 ```
-  </a>
-</pre>
 A more detailed analysis of the metric was later included in
 ```
 @inproceedings{rugayan23_interspeech,
