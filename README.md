@@ -7,12 +7,8 @@ This package implements the semantic distance for automatic speech recognition (
   year      = {2022},
   booktitle = {Interspeech 2022},
   pages     = {2283--2287},
-  doi       = {<pre>
-    <a href="https://doi.org/10.21437/Interspeech.2022-817">
-      10.21437/Interspeech.2022-817
-    </a>
-  </pre>},
-  issn      = {2958-1796},
+  doi       = {10.21437/Interspeech.2022-817},
+  issn      = {2958-1796}
 }
 ```
 A more detailed analysis of the metric was later included in
@@ -23,8 +19,8 @@ A more detailed analysis of the metric was later included in
   year      = {2023},
   booktitle = {INTERSPEECH 2023},
   pages     = {2158--2162},
-  doi       = {[10.21437/Interspeech.2023-1778](https://doi.org/10.21437/Interspeech.2023-1778)},
-  issn      = {2958-1796},
+  doi       = {10.21437/Interspeech.2023-1778},
+  issn      = {2958-1796}
 }
 ```
 If you use this code in your research, please achnowledge us by citing at least one of the above papers.
