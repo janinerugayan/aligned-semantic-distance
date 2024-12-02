@@ -1,5 +1,5 @@
-numpy
-dtw-python==1.1.10
+numpy>2.0
+dtw-python
 scipy
 torch
 tabulate
