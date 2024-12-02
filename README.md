@@ -1,4 +1,4 @@
-# aligned_semantic_distance
+# Aligned Semantic Distance
 
 ## Local installation
 
