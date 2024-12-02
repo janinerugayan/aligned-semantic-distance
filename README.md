@@ -1,16 +1,22 @@
 # Aligned Semantic Distance
 
 ## Local installation
+Download the code or clone the repository. Then in the repository's root directory, run
 
 ```
 python3 -m pip install .
-
-# Or direct installation from git
+```
+Alternatively, you can install direclty from git (but this requires a working authentication):
+```
 python3 -m pip install "git+https://github.com/${username}/${repository}.git@${branch}"
 ```
-
+for example
 ```
-python3 -m pip show "${NAME}"
+python3 -m pip install "git+https://github.com/${username}/janinerugayan/aligned-semantic-distance.git"
+```
+Check installation with
+```
+python3 -m pip show aligned_semantic_distance
 ```
 
 ## Testing the package
