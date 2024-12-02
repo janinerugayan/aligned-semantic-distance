@@ -38,5 +38,11 @@ Import the package. It requires the reference and hypothesis text. You can defin
 ```
 import aligned_semantic_distance as asd
 
+# function returns a named tuple 
+asd_output = asd.get_asd_output(reference_text, hypothesis_text, model, tokenizer, layers)
 
+print(asd_output["score"])
+
+# prints the resulting token-wise alignment of the reference and hypothesis
+asd.print_alignment(asd_output)
 ```
