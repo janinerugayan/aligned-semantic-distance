@@ -8,10 +8,6 @@ python3 -m pip install .
 ```
 Alternatively, you can install direclty from git (but this requires a working authentication):
 ```
-python3 -m pip install "git+https://github.com/${username}/${repository}.git@${branch}"
-```
-for example
-```
 python3 -m pip install "git+https://github.com/janinerugayan/aligned-semantic-distance.git"
 ```
 Check installation with
