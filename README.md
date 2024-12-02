@@ -28,12 +28,12 @@ python3 -m pip show aligned_semantic_distance
 
 ## Usage
 
-```
 Define the following parameters to start using the metric:
 ```
 model = 
 tokenizer = 
 ```
+
 Import the package. It requires the reference and hypothesis text. You can define which output layers (by layer number) of the BERT model are to be considered. 
 ```
 import aligned_semantic_distance as asd
