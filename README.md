@@ -9,7 +9,7 @@ A more detailed analysis of the metric was later included in
 *Janine Rugayan and Giampiero Salvi and Torbjørn Svendsen* (2023). **Perceptual and Task-Oriented Assessment of a Semantic Metric for ASR Evaluation**. In Interspeech, pp. 2158--2162<br>
 [![DOI:10.21437/Interspeech.2023-1778](https://zenodo.org/badge/DOI/10.21437/Interspeech.2023-1778.svg)](https://doi.org/10.21437/Interspeech.2023-1778)
 
-If you use this code in your research, please achnowledge us by citing at least one of the above papers.
+If you use this code in your research, please acknowledge us by citing at least one of the above papers.
 
 ## Local installation
 Download the code or clone the repository. Then in the repository's root directory, run
@@ -29,5 +29,14 @@ python3 -m pip show aligned_semantic_distance
 ## Usage
 
 ```
+Define the following parameters to start using the metric:
+```
+model = 
+tokenizer = 
+```
+Import the package. It requires the reference and hypothesis text. You can define which output layers (by layer number) of the BERT model are to be considered. 
+```
+import aligned_semantic_distance as asd
+
 
 ```
