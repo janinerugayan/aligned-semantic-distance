@@ -35,7 +35,7 @@ model = BertModel.from_pretrained(metric_modelname)
 tokenizer = AutoTokenizer.from_pretrained(metric_modelname)
 ```
 
-Import the package. It requires the reference and hypothesis text. You can define which output layers (by layer number) of the BERT model are to be considered. 
+Import the package. It requires the reference and hypothesis text. You can define which output layers (defined as a list of layer numbers) of the BERT model are to be considered. 
 ```
 import aligned_semantic_distance as asd
 
