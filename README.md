@@ -12,13 +12,13 @@ A more detailed analysis of the metric was later included in
 If you use this code in your research, please acknowledge us by citing at least one of the above papers.
 
 ## Local installation
-Download the code or clone the repository.
+Download the code or clone the repository and move to the repository's root directory.
 If your python installation requires the use of virtual environments, then run
 ```
 python3 -m venv asdvenv
 source asdvenv/bin/activate
 ```
-Then in the repository's root directory, run
+Then install by running
 
 ```
 python3 -m pip install .
