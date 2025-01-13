@@ -30,8 +30,9 @@ python3 -m pip show aligned_semantic_distance
 
 Define the following parameters to start using the metric:
 ```
-model = 
-tokenizer = 
+metric_modelname = 'ltg/norbert2'
+model = BertModel.from_pretrained(metric_modelname)
+tokenizer = AutoTokenizer.from_pretrained(metric_modelname)
 ```
 
 Import the package. It requires the reference and hypothesis text. You can define which output layers (by layer number) of the BERT model are to be considered. 
