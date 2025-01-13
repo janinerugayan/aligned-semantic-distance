@@ -49,8 +49,8 @@ import aligned_semantic_distance as asd
 ```
 Define a reference transcription and an ASR hypothesys transcription, for example:
 ```
-reference_text = 'dfd gdf dfg df df '
-hypothesis_text = 'yuy ty ty tnghgh'
+reference_text = 'mange tror at ordet øl på norsk kjem ifra det engelske ale'
+hypothesis_text = 'mange trur at ordet øl på norsk kjem ifra det engelske aill'
 ```
 Choose which layers from the large language model are used for the word embeddings (this is a list of one or more layer indexes):
 ```
