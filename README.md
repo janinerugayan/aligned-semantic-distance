@@ -34,29 +34,25 @@ python3 -m pip show aligned_semantic_distance
 
 ## Usage
 
-First load a large language model to be used for the word embeddings.
-For example, using [NorBERT2](https://huggingface.co/ltg/norbert2):
+Define a reference transcription and an ASR hypothesys transcription that you want to compare, for example:
+```
+reference_text = 'mange tror at ordet øl på norsk kjem ifra det engelske ale'
+hypothesis_text = 'mange trur at ordet øl på norsk kjem ifra det engelske aill'
+```
+Load a large language model to be used for the word embeddings, and specify which layers in the model to use.
+For example, using [NorBERT2](https://huggingface.co/ltg/norbert2)'s 5th to 8th layer:
 ```
 from transformers import BertModel, AutoTokenizer
 metric_modelname = 'ltg/norbert2'
 model = BertModel.from_pretrained(metric_modelname)
 tokenizer = AutoTokenizer.from_pretrained(metric_modelname)
-```
-
-Import the package.
-```
-import aligned_semantic_distance as asd
-```
-Define a reference transcription and an ASR hypothesys transcription, for example:
-```
-reference_text = 'mange tror at ordet øl på norsk kjem ifra det engelske ale'
-hypothesis_text = 'mange trur at ordet øl på norsk kjem ifra det engelske aill'
-```
-Choose which layers from the large language model are used for the word embeddings (this is a list of one or more layer indexes):
-```
 layers = [5, 6, 7, 8]
 ```
 
+Import the ASD package.
+```
+import aligned_semantic_distance as asd
+```
 Run the semantic metric:
 ```
 # function returns a named tuple 
