@@ -52,7 +52,7 @@ Define a reference transcription and an ASR hypothesys transcription, for exampl
 reference_text = 'dfd gdf dfg df df '
 hypothesis_text = 'yuy ty ty tnghgh'
 ```
-Choose which layers from the large language model are used for the word embeddings (this is a list of one or more layers indexes):
+Choose which layers from the large language model are used for the word embeddings (this is a list of one or more layer indexes):
 ```
 layers = [5, 6, 7, 8]
 ```
