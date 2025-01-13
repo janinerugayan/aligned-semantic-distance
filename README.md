@@ -65,7 +65,14 @@ The function returns a namedtouple with the following fields:
 * `ref_token_embeddings`: array of embeddings for reference text after alignment
 * `hyp_token_embeddings`: array of embeddings for hypothesis text after alignment
 
-If you want pretty print the token alignment run:
+The score in our example should be:
+```
+print(asd_output.score)
+0.1517176673313525
+```
+If you want pretty print the token alignment run (with the output for our example):
 ```
 asd.print_alignment(asd_output)
+| REF: | [CLS] | mange | tror | at | ordet | øl | på | norsk | kjem | ifra | det | engelske | ale | ale  | [SEP] |
+| HYP: | [CLS] | mange | trur | at | ordet | øl | på | norsk | kjem | ifra | det | engelske | ai  | ##ll | [SEP] |
 ```
