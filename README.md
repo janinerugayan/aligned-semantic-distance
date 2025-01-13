@@ -68,6 +68,7 @@ The function returns a namedtouple with the following fields:
 * `hyp_tokens`: list of tokens used to represent the hypothesis text after alignment
 * `ref_token_embeddings`: array of embeddings for reference text after alignment
 * `hyp_token_embeddings`: array of embeddings for hypothesis text after alignment
+
 If you want pretty print the token alignment run:
 ```
 asd.print_alignment(asd_output)
