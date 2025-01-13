@@ -12,7 +12,13 @@ A more detailed analysis of the metric was later included in
 If you use this code in your research, please acknowledge us by citing at least one of the above papers.
 
 ## Local installation
-Download the code or clone the repository. Then in the repository's root directory, run
+Download the code or clone the repository.
+If your python installation requires the use of virtual environments, then run
+```
+python3 -m venv asdvenv
+source asdvenv/bin/activate
+```
+Then in the repository's root directory, run
 
 ```
 python3 -m pip install .
@@ -28,22 +34,41 @@ python3 -m pip show aligned_semantic_distance
 
 ## Usage
 
-Define the following parameters to start using the metric:
+First load a large language model to be used for the word embeddings.
+For example, using [NorBERT2](https://huggingface.co/ltg/norbert2):
 ```
+from transformers import BertModel, AutoTokenizer
 metric_modelname = 'ltg/norbert2'
 model = BertModel.from_pretrained(metric_modelname)
 tokenizer = AutoTokenizer.from_pretrained(metric_modelname)
 ```
 
-Import the package. It requires the reference and hypothesis text. You can define which output layers (defined as a list of layer numbers) of the BERT model are to be considered. 
+Import the package.
 ```
 import aligned_semantic_distance as asd
+```
+Define a reference transcription and an ASR hypothesys transcription, for example:
+```
+reference_text = 'dfd gdf dfg df df '
+hypothesis_text = 'yuy ty ty tnghgh'
+```
+Choose which layers from the large language model are used for the word embeddings (this is a list of one or more layers indexes):
+```
+layers = [5, 6, 7, 8]
+```
 
+Run the semantic metric:
+```
 # function returns a named tuple 
 asd_output = asd.get_asd_output(reference_text, hypothesis_text, model, tokenizer, layers)
-
-print(asd_output["score"])
-
-# prints the resulting token-wise alignment of the reference and hypothesis
+```
+The function returns a namedtouple with the following fields:
+* `score`: the global semantic distance between reference and hypothesis
+* `ref_tokens`: list of tokens used to represent the reference text after alignment
+* `hyp_tokens`: list of tokens used to represent the hypothesis text after alignment
+* `ref_token_embeddings`: array of embeddings for reference text after alignment
+* `hyp_token_embeddings`: array of embeddings for hypothesis text after alignment
+If you want pretty print the token alignment run:
+```
 asd.print_alignment(asd_output)
 ```

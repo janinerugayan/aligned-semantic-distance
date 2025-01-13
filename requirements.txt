@@ -3,3 +3,4 @@ dtw-python
 scipy
 torch
 tabulate
+transformers
